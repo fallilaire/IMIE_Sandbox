@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+	<title>Hotel - <%= data.name %></title>
+</head>
+<body class="centerAlign">
+	<div>
+		<h1><%= data.name %></h1>
+		<ul>
+			<li><%= data.name %></li>
+			<li><%= data.classement %></li>
+			<li><%= data.commune %></li>
+			<li><%= data.code_postal %></li>
+			<li><%= data.adresse %></li>
+			<li><%= data.dept %></li>
+			<li><%= data.capacite_d_accueil_personnes %></li>
+			<li><%= data.nombre_de_chambres %></li>
+		</ul>
+		
+		<form method="POST" action="/hotel/<%= data.id %>/comment">
+			Auteur : <input name="author" type=text /><br />
+			Contenu : <input name="content" type=text /><br />
+			<input type="submit" />
+		</form>
+		      
+</body>
+</html>

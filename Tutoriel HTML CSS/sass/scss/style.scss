@@ -1,0 +1,87 @@
+@import "variables";
+@import "mixins";
+
+.clear {
+  clear:both;
+}
+
+h1 {
+  color: #480505;
+}
+
+#paragraphes {
+  background-color: red;
+  p {
+    color: white;
+  }
+}
+
+#conteneur {
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  width: 100%;
+}
+
+header {
+  max-height: 300;
+  background-color: blue;
+}
+
+nav {
+
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+li {
+  font-style: italic;
+  width: $largeur_element_menu;
+}
+
+article {
+  width: 300px;
+  min-width: 100px;
+  background-color: $couleur_principale;
+}
+
+aside {
+  width: 100px;
+}
+
+footer {
+  max-height: 200px;
+  background-color: grey;
+}
+
+.bloc_carree {
+  @include flex_center;
+  @include petit_carre_rouge(#540065, 200px, 'rond');
+}
+
+.bloc_forme {
+  @include flex_center;
+  @include forme(#540065, 200px, 'rond', orange);
+}
+
+.bloc {
+  @include flex_center;
+  @include forme(red, 200px, 'rond', white);
+  float: left;
+  @media (max-width: 600px), (max-device-width: 600px) {
+    float: right;
+  }
+}
+
+.ronds {
+  @extend .bloc;
+  p {
+    color: blue;
+  }
+}

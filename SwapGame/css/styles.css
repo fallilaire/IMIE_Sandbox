@@ -1,0 +1,21 @@
+.board{
+	margin: auto;
+}
+.board > div{
+	width: 70px;
+	height: 70px;
+	display: inline-block;
+	
+	text-align: center;
+	line-height: 70px;
+	font-weight: bold;
+	font-size: 2em;
+	vertical-align: top;
+	margin: 1px;
+
+	cursor: pointer;
+}
+
+.board > div:not(:empty){
+	background-color: rgba(255,0,0,0.3);
+}

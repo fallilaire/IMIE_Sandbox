@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_poxKsN1rEea4sNPZxCiaPA" name="NewModel">
+  <packagedElement xmi:type="uml:Class" xmi:id="_s1PGsN1rEea4sNPZxCiaPA" name="Bibliotheque">
+    <interfaceRealization xmi:id="_d7AoMN4dEeaFfISdZZLgwg" client="_s1PGsN1rEea4sNPZxCiaPA" supplier="_YCKa8N4cEeaFfISdZZLgwg" contract="_YCKa8N4cEeaFfISdZZLgwg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_T6ec0N1sEea4sNPZxCiaPA" name="Bibliothecaire">
+    <generalization xmi:id="_bP4kIN1sEea4sNPZxCiaPA" general="_XJNpsN1sEea4sNPZxCiaPA"/>
+    <interfaceRealization xmi:id="_ex-scN4dEeaFfISdZZLgwg" client="_T6ec0N1sEea4sNPZxCiaPA" supplier="_ZPlQUN4cEeaFfISdZZLgwg" contract="_ZPlQUN4cEeaFfISdZZLgwg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WI0jsN1sEea4sNPZxCiaPA" name="Adherent">
+    <generalization xmi:id="_bp0HEN1sEea4sNPZxCiaPA" general="_XJNpsN1sEea4sNPZxCiaPA"/>
+    <ownedAttribute xmi:id="_3AEGgN1sEea4sNPZxCiaPA" name="numeroAdherent" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3AEtkN1sEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3AEtkd1sEea4sNPZxCiaPA" value="1"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:id="_wRJSAN4dEeaFfISdZZLgwg" client="_WI0jsN1sEea4sNPZxCiaPA" supplier="_uDoRkN4dEeaFfISdZZLgwg" contract="_uDoRkN4dEeaFfISdZZLgwg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_XJNpsN1sEea4sNPZxCiaPA" name="Personne" isAbstract="true">
+    <ownedAttribute xmi:id="_IxEYEN1vEea4sNPZxCiaPA" name="prenom" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IxEYEd1vEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IxEYEt1vEea4sNPZxCiaPA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_KjzhAN1vEea4sNPZxCiaPA" name="nom" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KjzhAd1vEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KjzhAt1vEea4sNPZxCiaPA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_c4UhkN1sEea4sNPZxCiaPA" name="A_bibliotheque_bibliothecaires" memberEnd="_c4Uhkd1sEea4sNPZxCiaPA _c4UhlN1sEea4sNPZxCiaPA" navigableOwnedEnd="_c4UhlN1sEea4sNPZxCiaPA _c4Uhkd1sEea4sNPZxCiaPA">
+    <ownedEnd xmi:id="_c4Uhkd1sEea4sNPZxCiaPA" name="bibliotheque" type="_YCKa8N4cEeaFfISdZZLgwg" association="_c4UhkN1sEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_c4Uhkt1sEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_c4Uhk91sEea4sNPZxCiaPA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_c4UhlN1sEea4sNPZxCiaPA" name="bibliothecaires" type="_T6ec0N1sEea4sNPZxCiaPA" association="_c4UhkN1sEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_c4Uhld1sEea4sNPZxCiaPA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_c4Uhlt1sEea4sNPZxCiaPA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_dih8MN1sEea4sNPZxCiaPA" name="A_bibliotheques_adherents" memberEnd="_dih8Md1sEea4sNPZxCiaPA _dih8NN1sEea4sNPZxCiaPA" navigableOwnedEnd="_dih8Md1sEea4sNPZxCiaPA _dih8NN1sEea4sNPZxCiaPA">
+    <ownedEnd xmi:id="_dih8Md1sEea4sNPZxCiaPA" name="bibliotheques" type="_s1PGsN1rEea4sNPZxCiaPA" association="_dih8MN1sEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dih8Mt1sEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dih8M91sEea4sNPZxCiaPA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_dih8NN1sEea4sNPZxCiaPA" name="adherents" type="_uDoRkN4dEeaFfISdZZLgwg" association="_dih8MN1sEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_dih8Nd1sEea4sNPZxCiaPA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dih8Nt1sEea4sNPZxCiaPA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jzLa4N1sEea4sNPZxCiaPA" name="Catalogue"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ryokwN1sEea4sNPZxCiaPA" name="bibliothèquesToCatalogues" memberEnd="_ryokwd1sEea4sNPZxCiaPA _ryroEd1sEea4sNPZxCiaPA" navigableOwnedEnd="_ryroEd1sEea4sNPZxCiaPA">
+    <ownedEnd xmi:id="_ryokwd1sEea4sNPZxCiaPA" name="bibliotheque" type="_s1PGsN1rEea4sNPZxCiaPA" association="_ryokwN1sEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ryrBAN1sEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ryroEN1sEea4sNPZxCiaPA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_ryroEd1sEea4sNPZxCiaPA" name="catalogue" type="_jzLa4N1sEea4sNPZxCiaPA" aggregation="shared" association="_ryokwN1sEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_rytdQN1sEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_rytdQd1sEea4sNPZxCiaPA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_swlawN1sEea4sNPZxCiaPA" name="Livre">
+    <ownedAttribute xmi:id="_uoDSsN1sEea4sNPZxCiaPA" name="titre" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uoDSsd1sEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uoD5wN1sEea4sNPZxCiaPA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_y9rPIN1sEea4sNPZxCiaPA" name="numeroISBN" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_y9rPId1sEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_y9rPIt1sEea4sNPZxCiaPA" value="1"/>
+    </ownedAttribute>
+    <interfaceRealization xmi:id="_rsFLYN4dEeaFfISdZZLgwg" client="_swlawN1sEea4sNPZxCiaPA" supplier="_cp-6oN4cEeaFfISdZZLgwg" contract="_cp-6oN4cEeaFfISdZZLgwg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_80wpAN1sEea4sNPZxCiaPA" name="Auteur">
+    <generalization xmi:id="_-U6NIN1sEea4sNPZxCiaPA" general="_XJNpsN1sEea4sNPZxCiaPA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_CBIAMN1tEea4sNPZxCiaPA" memberEnd="_CBIAMd1tEea4sNPZxCiaPA _CBIANN1tEea4sNPZxCiaPA" navigableOwnedEnd="_CBIAMd1tEea4sNPZxCiaPA _CBIANN1tEea4sNPZxCiaPA">
+    <ownedEnd xmi:id="_CBIAMd1tEea4sNPZxCiaPA" name="livres" type="_swlawN1sEea4sNPZxCiaPA" association="_CBIAMN1tEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CBIAMt1tEea4sNPZxCiaPA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CBIAM91tEea4sNPZxCiaPA" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_CBIANN1tEea4sNPZxCiaPA" name="auteurs" type="_80wpAN1sEea4sNPZxCiaPA" association="_CBIAMN1tEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_CBIANd1tEea4sNPZxCiaPA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CBIANt1tEea4sNPZxCiaPA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wjf2QN1tEea4sNPZxCiaPA" name="Emprunt">
+    <ownedAttribute xmi:id="_G7734N1uEea4sNPZxCiaPA" name="statut" visibility="private" type="_ACcQgN1uEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_G78e8N1uEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_G78e8d1uEea4sNPZxCiaPA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_xd824N1uEea4sNPZxCiaPA" name="dateDebut" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml#Date"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_xd824d1uEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_xd824t1uEea4sNPZxCiaPA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_1HP40N1uEea4sNPZxCiaPA" name="dateFin" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml#Date"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1HP40d1uEea4sNPZxCiaPA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1HP40t1uEea4sNPZxCiaPA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_4bB9wN1uEea4sNPZxCiaPA" name="dateMaxRetour" visibility="private" isDerived="true">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/XMLPrimitiveTypes.library.uml#Date"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4bB9wd1uEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4bB9wt1uEea4sNPZxCiaPA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_71ZBQN1tEea4sNPZxCiaPA" name="A_livres_catalogues" memberEnd="_71ZBQd1tEea4sNPZxCiaPA _71ZBRN1tEea4sNPZxCiaPA" navigableOwnedEnd="_71ZBQd1tEea4sNPZxCiaPA">
+    <ownedEnd xmi:id="_71ZBQd1tEea4sNPZxCiaPA" name="liste" type="_swlawN1sEea4sNPZxCiaPA" association="_71ZBQN1tEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_71ZBQt1tEea4sNPZxCiaPA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_71ZBQ91tEea4sNPZxCiaPA" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_71ZBRN1tEea4sNPZxCiaPA" name="catalogue" type="_jzLa4N1sEea4sNPZxCiaPA" association="_71ZBQN1tEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_71ZBRd1tEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_71ZBRt1tEea4sNPZxCiaPA" value="1"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-KnzQN1tEea4sNPZxCiaPA" memberEnd="_-KnzQd1tEea4sNPZxCiaPA _-KnzRN1tEea4sNPZxCiaPA" navigableOwnedEnd="_-KnzQd1tEea4sNPZxCiaPA _-KnzRN1tEea4sNPZxCiaPA">
+    <ownedEnd xmi:id="_-KnzQd1tEea4sNPZxCiaPA" name="adherents" type="_WI0jsN1sEea4sNPZxCiaPA" association="_-KnzQN1tEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-KnzQt1tEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-KnzQ91tEea4sNPZxCiaPA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_-KnzRN1tEea4sNPZxCiaPA" name="emprunts" type="_wjf2QN1tEea4sNPZxCiaPA" association="_-KnzQN1tEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-KnzRd1tEea4sNPZxCiaPA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-KnzRt1tEea4sNPZxCiaPA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_-69EAN1tEea4sNPZxCiaPA" memberEnd="_-69rEN1tEea4sNPZxCiaPA _-69rE91tEea4sNPZxCiaPA" navigableOwnedEnd="_-69rEN1tEea4sNPZxCiaPA _-69rE91tEea4sNPZxCiaPA">
+    <ownedEnd xmi:id="_-69rEN1tEea4sNPZxCiaPA" name="livre" type="_cp-6oN4cEeaFfISdZZLgwg" association="_-69EAN1tEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-69rEd1tEea4sNPZxCiaPA" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-69rEt1tEea4sNPZxCiaPA" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_-69rE91tEea4sNPZxCiaPA" name="emprunts" type="_wjf2QN1tEea4sNPZxCiaPA" association="_-69EAN1tEea4sNPZxCiaPA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_-69rFN1tEea4sNPZxCiaPA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_-69rFd1tEea4sNPZxCiaPA" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Enumeration" xmi:id="_ACcQgN1uEea4sNPZxCiaPA" name="Statut">
+    <ownedAttribute xmi:id="_B7D_AN1uEea4sNPZxCiaPA" name="en cours" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_B7D_Ad1uEea4sNPZxCiaPA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_B7EmEN1uEea4sNPZxCiaPA" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_FWUk8N1uEea4sNPZxCiaPA" name="termine" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FWUk8d1uEea4sNPZxCiaPA"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FWVMAN1uEea4sNPZxCiaPA" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_YCKa8N4cEeaFfISdZZLgwg" name="IBibliotheque">
+    <ownedOperation xmi:id="_7TGPsN1xEeaZFeSuTD1boA" name="listeDesEmpruntsEnCours"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_ZPlQUN4cEeaFfISdZZLgwg" name="IBibliothecaire">
+    <ownedOperation xmi:id="_m3K64N1tEea4sNPZxCiaPA" name="rechercher">
+      <ownedParameter xmi:id="_1n8gMN1wEeaZFeSuTD1boA" name="livre" type="_swlawN1sEea4sNPZxCiaPA"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_pwtT0N1tEea4sNPZxCiaPA" name="creerFicheDePret">
+      <ownedParameter xmi:id="_sAcP4N1vEea4sNPZxCiaPA" name="adherent" type="_WI0jsN1sEea4sNPZxCiaPA"/>
+      <ownedParameter xmi:id="_sAcP4d1vEea4sNPZxCiaPA" name="livre" type="_swlawN1sEea4sNPZxCiaPA"/>
+    </ownedOperation>
+    <ownedOperation xmi:id="_fTtXMN1yEeaZFeSuTD1boA" name="peutEmprunterUnLivre">
+      <ownedParameter xmi:id="_jyczYN1yEeaZFeSuTD1boA" name="adherent" type="_WI0jsN1sEea4sNPZxCiaPA"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_cp-6oN4cEeaFfISdZZLgwg" name="ILivre">
+    <ownedOperation xmi:id="_B_YhgN1yEeaZFeSuTD1boA" name="estDisponible"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_uDoRkN4dEeaFfISdZZLgwg" name="IAdherent">
+    <ownedOperation xmi:id="_ZU620N1tEea4sNPZxCiaPA" name="emprunter">
+      <ownedParameter xmi:id="_locMAN1vEea4sNPZxCiaPA" name="livre" type="_swlawN1sEea4sNPZxCiaPA"/>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_02o5oN4hEeaFfISdZZLgwg" name="Emplacement">
+    <ownedAttribute xmi:id="_2tkmEN4hEeaFfISdZZLgwg" name="salle" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_2tkmEd4hEeaFfISdZZLgwg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_2tkmEt4hEeaFfISdZZLgwg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_4nn38N4hEeaFfISdZZLgwg" name="rangee" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_4nxo8N4hEeaFfISdZZLgwg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_4nxo8d4hEeaFfISdZZLgwg" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_6hYO4N4hEeaFfISdZZLgwg" name="etage" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6hYO4d4hEeaFfISdZZLgwg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6hYO4t4hEeaFfISdZZLgwg" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Gs-CAN4iEeaFfISdZZLgwg" memberEnd="_Gs-CAd4iEeaFfISdZZLgwg _Gs-CBN4iEeaFfISdZZLgwg" navigableOwnedEnd="_Gs-CBN4iEeaFfISdZZLgwg">
+    <ownedEnd xmi:id="_Gs-CAd4iEeaFfISdZZLgwg" name="bibliotheque" type="_s1PGsN1rEea4sNPZxCiaPA" association="_Gs-CAN4iEeaFfISdZZLgwg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Gs-CAt4iEeaFfISdZZLgwg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Gs-CA94iEeaFfISdZZLgwg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_Gs-CBN4iEeaFfISdZZLgwg" name="emplacements" type="_02o5oN4hEeaFfISdZZLgwg" aggregation="composite" association="_Gs-CAN4iEeaFfISdZZLgwg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Gs-CBd4iEeaFfISdZZLgwg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Gs-CBt4iEeaFfISdZZLgwg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_UeQnoN4iEeaFfISdZZLgwg" memberEnd="_UeQnod4iEeaFfISdZZLgwg _UeZxkN4iEeaFfISdZZLgwg" navigableOwnedEnd="_UeQnod4iEeaFfISdZZLgwg _UeZxkN4iEeaFfISdZZLgwg">
+    <ownedEnd xmi:id="_UeQnod4iEeaFfISdZZLgwg" name="emplacement" type="_02o5oN4hEeaFfISdZZLgwg" association="_UeQnoN4iEeaFfISdZZLgwg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UeQnot4iEeaFfISdZZLgwg" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UeQno94iEeaFfISdZZLgwg" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_UeZxkN4iEeaFfISdZZLgwg" name="livres" type="_cp-6oN4cEeaFfISdZZLgwg" association="_UeQnoN4iEeaFfISdZZLgwg">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_UeZxkd4iEeaFfISdZZLgwg"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_UeZxkt4iEeaFfISdZZLgwg" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

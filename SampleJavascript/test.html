@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function Chien(nom) {
+        this.nom = nom;
+        this.aboyer = function () {
+          console.log("aboyer!");
+        }
+      }
+
+      var waouf = new Chien("Felix");
+      console.log(waouf.nom);
+      waouf.aboyer();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<title>Liste des hotels</title>
+</head>
+<body class="centerAlign">
+	<div>
+      <h1>Liste des hotels</h1>
+	</div>
+	<div>
+		<ul>
+			<% for (var i=0; i < data.length; i++) { %> 
+			<li>
+				<a href="/ville/<%= data[i].fields.code_postal %>/hotels"><%= data[i].fields.code_postal %></a>
+			</li>
+			<% } %>
+		</ul>
+	</div>
+
+</body>
+</html>

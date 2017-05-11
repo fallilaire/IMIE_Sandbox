@@ -1,0 +1,55 @@
+<html>
+  <!-- Last edited by VBO -->
+  <head>
+    <title>TO-Do List en Javascript</title>
+    <script type="text/javascript">
+        function addList(myTable) {								// Fonction de création de la nouvelle liste
+          var table = document.getElementById(myTable);						// Déclaration de la variable table qui va devenir la balise table
+          var rowCount = table.rows.length;							// définie dans la variable le nombre d'éléments <tr> (rangée)
+          var row = table.insertRow(rowCount);							// La méthode insertRow () insère une nouvelle ligne à l'index spécifié rowCount dans un tableau.
+          var text = document.getElementById('txt1').value;
+          var cell1 = row.insertCell(0);							// La méthode insertCell () insère une cellule dans la ligne actuelle en postion 0.
+          var element1 = document.createElement("input");					// Creation de l'élément input
+          element1.type = "text";								// Definition du type
+          element1.style.width="100%";                                                            //
+          element1.name = "txtbox[]";								// Définition du nom de l'input de type texte
+          element1.value=text;
+          cell1.appendChild(element1);								// Nous inserons l'élement 1 dans la cellule
+
+          var cell2 = row.insertCell(1);							// Idem nous inserons la cellule numero 2 en position 1
+          var element2 = document.createElement("input");					// Nous créons un input
+          element2.type = "checkbox";								// Definition du type Checkbox
+          element2.name = "chkbox[]";                                                           // définition du nom de la checkbox
+
+          cell2.appendChild(element2);								// Nous inserons l'élement 2 dans la seconde cellule
+
+          document.getElementById('txt1').value="";                                             // Réinitialise la textbox à vide
+          document.getElementById('pTotal').innerHTML = rowCount + 1;                           // Nous modifions la variable du compteur en l'incrementant
+        }
+
+        function deleteList(myTable) {								// Fonction de suppression d'élement
+          var table = document.getElementById(myTable);						// Déclaration de la variable table qui va devenir la balise table
+          var chkbox;
+
+          for (var i = table.rows.length - 1; i >= 0; i--) {                                    // Boucle for
+            console.log(i);
+            chkbox = table.rows[i].cells[1].childNodes[0];					// definition de la variable de la check box avec la cellule en postion 1
+            if(typeof chkbox.checked !== 'undefined' && chkbox.checked) {                       // si il y a une chkbox et que la chkbox est validée
+              table.deleteRow(i);                                                               // nous supprimons la ligne ayant l'indice du compeur
+            }
+          }
+          document.getElementById('pTotal').innerHTML = table.rows.length;                      // Mise à jour de la variable du compteur
+        }
+     </script>
+  </head>
+  <body>
+    <h1>To-Do List</h1>
+    <input type="textbox" id="txt1" onkeypress="if (event.keyCode == 13) addList('ToDoListTable')" placeholder="Saisissez une tache"/>
+    <input type="button" value="Add Task" onclick="addList('ToDoListTable')" />
+    <input type="button" value="Delete Task" onclick="deleteList('ToDoListTable')" />
+    <table id="ToDoListTable" width="350px" border="1">
+    </table>
+    Nombre de tache <a id="pTotal">0</a>
+  </body>
+</body>
+</html>

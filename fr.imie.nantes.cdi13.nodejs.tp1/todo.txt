@@ -1,0 +1,24 @@
+/hotels (nom / nombre d'étoiles)
+/hotel/:id (donnÃ©es complètes)
+/ville/:codePostal/hotels (données complètes)
+
+/hotels/:codePostal/:distance (recherche les hotels Ã  une distance inférieure)
+/hotels/:codePostal/statistiques/moyenne (note moyenne sur la ville)
+/hotels/:codePostal/statistiques/capacite (capacite total d'hébergement sur le CP)
+
+SHELL:
+show dbs #affiche les bases de données
+use db #permet de se positionner sur la base "db"
+show collections #affiche les collections
+
+Node.js
+db.collections('db').insert({ })
+db.collections('db').find().toArray(function(err, data) {})
+db.collections('db').remove({ _id : ObjectID('...')})
+
+POST /hotel/:id/comment => ajoute un commentaire
+GET /hotel/:id/comments => liste des commentaires
+
+conseil : stocker les commentaires dans une collection séparée
+
+commentaire : auteur, date, contenu

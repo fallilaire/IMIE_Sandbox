@@ -1,0 +1,188 @@
+h1 {
+  color: #480505;
+}
+/******************************************/
+/* Test Display ***************************/
+/******************************************/
+.conteneur div{
+  width: 200px;
+  height: 50px;
+  background-color: orange;
+}
+
+#conteneur_block div {
+  display: block;
+}
+
+#conteneur_inline div {
+  display: inline;
+}
+
+#conteneur_inline_block div {
+  display: inline-block;
+  font-size: 16px;
+}
+/* Pour supprimer les espaces entre les blocs */
+#conteneur_inline_block {
+  font-size: 0;
+}
+
+#conteneur_flex div {
+  display: flex;
+}
+
+/******************************************/
+/* Test Float *****************************/
+/******************************************/
+.bloc {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.blocr {
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+
+.blue {
+  background-color: #3f51b5;
+}
+
+.red {
+  background-color: #f44336;
+}
+
+.purple {
+  background-color: purple;
+}
+
+.green {
+  background-color: green;
+  width: 100px;
+  height: 100px;
+  clear: both;
+  /* ou clear:right ou clear:left si précédé par des float */
+}
+
+#conteneur_float {
+  background-color: yellow;
+}
+
+.clear {
+  clear:both;
+}
+
+/******************************************/
+/* Test Position **************************/
+/******************************************/
+
+.pos_blue {
+  position: static; /* par défaut (="pon positionné") */
+  background-color: #3f51b5;
+}
+
+.pos_red {
+  position: relative; /* se positionne par rapport à sa position initiale */
+  left: 100px;
+  background-color: #f44336;
+}
+
+.pos_purple {
+  position: absolute; /* se positionne par rapport au parent le plus proche qui est positionné (= non static) */
+  background-color: purple;
+}
+
+.pos_green {
+  position: fixed; /* se positionne par rapport à la fenêtre du navigateur (viewport). Toujours visible malgré le scroll de la page */
+  bottom: 0px;
+  right: 0px;
+  background-color: green;
+}
+
+/******************************************/
+/* Test Tableau ***************************/
+/******************************************/
+
+main {
+  display: table;
+  border-width: thin;
+  border-style: solid;
+}
+
+section, aside {
+  display: table-cell;
+  border-width: thin;
+  border-style: solid;
+}
+
+/******************************************/
+/* Test Flex ******************************/
+/******************************************/
+
+.blocflex {
+  width: 100px;
+  height: 100px;
+  background-color: #3f51b5;
+}
+
+#conteneur_flex_row {
+  display: flex;
+  flex-direction: row;
+}
+
+#conteneur_flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+#conteneur_flex_justify {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+/******************************************/
+/* Media Query ****************************/
+/******************************************/
+
+.blocm {
+  background-color: green;
+  width: 50px;
+  height: 50px;
+}
+
+.element_menu {
+  background-color: yellow;
+  width: 20%;
+  float: left;
+}
+
+#menu_principal {
+  display: flex;
+  flex-direction: row;
+}
+
+#menu_principal li {
+  width: 20%;
+}
+
+@media (max-width: 600px), (max-device-width: 600px) {
+  .blocm {
+    background-color: red;
+  }
+
+  .element_menu {
+    width: 100%;
+    float: none; /* facultatif */
+  }
+
+  #menu_principal {
+    flex-direction: column;
+  }
+
+  #menu_principal li {
+    width: 100%;
+  }
+}

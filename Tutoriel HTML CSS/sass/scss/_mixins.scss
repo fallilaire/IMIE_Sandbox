@@ -1,0 +1,29 @@
+@mixin petit_carre_rouge($color, $taille, $forme) {
+  background-color: $color;
+  width: $taille;
+  height: $taille;
+
+  @if $forme == "rond" {
+    border-radius: 50%;
+  }
+}
+
+@mixin forme($color, $taille, $forme, $color_p) {
+  background-color: $color;
+  width: $taille;
+  height: $taille;
+
+  @if $forme == "rond" {
+    border-radius: 50%;
+  }
+
+  & p {
+    color: $color_p;
+  }
+}
+
+@mixin flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,46 @@
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	 <short-name>imie</short-name>
+	<description>Bibliothèque de taglibs</description>	
+	<tag>
+		<name>tag1</name>
+		<tag-class>fr.imie.test.TestTag</tag-class>
+		<body-content>empty</body-content>
+	</tag>
+	<tag>
+		<name>tagSum</name>
+		<tag-class>fr.imie.test.TagLibSum</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>firstField</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>secondField</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>tagTable</name>
+		<tag-class>fr.imie.test.TagLibDisplayTable</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>nbLines</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>tagTablePremier</name>
+		<tag-class>fr.imie.test.TagLibNombrePremier</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>nbLines</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

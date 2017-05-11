@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<title>Liste des hotels</title>
+</head>
+<body class="centerAlign">
+	<div>
+      <h1>Liste des hotels</h1>
+	</div>
+	<div>
+		<ul>
+			<% for (var i=0; i < data.length; i++) { %> 
+			<li>
+				<a href="/hotel/<%= data[i]._id %>"><%= data[i].fields.nom_commercial %> - <%= data[i].fields.classement %></a> -
+				<a href="/hotel/<%= data[i]._id %>/comments">Voir les commentaires</a>
+			</li>
+			<% } %>
+		</ul>
+	</div>
+
+</body>
+</html>

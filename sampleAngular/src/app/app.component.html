@@ -1,0 +1,76 @@
+<div class="container">
+<div class="row">
+  
+	<!-- The list of contacts -->
+    <div class="col-6">
+      <h3>List of contacts</h3>
+      <table class="table">
+        <thead>
+        <tr>
+          <td><strong>#</strong></td>
+          <td><strong>Name</strong></td>
+          <td><strong>Adress</strong></td>
+          <td><strong>Phone</strong></td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let contact of contacts;">
+          <td>{{ contact.id}}</td>
+          <td>{{ contact.name}}</td>
+          <td>{{ contact.address}}</td>
+          <td>{{ contact.phone}}</td>
+        </tr>
+        </tbody>
+      </table>
+
+    </div>
+
+	<!-- The new contact block -->
+    <div class="col-6 new-contact">
+      <h3>Add new one </h3>
+      <form name="new-contact-form">
+
+        <div class="form-group row">
+          <label for="name" class="col-2 col-form-label">Name</label>
+          <div class="col-6">
+            <input class="form-control" type="text" id="name" name = "name" [(ngModel)]="newContact.name">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="name" class="col-2 col-form-label">Adress</label>
+          <div class="col-6">
+            <input class="form-control" type="text" id="address" name = "address" [(ngModel)]="newContact.address">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="name" class="col-2 col-form-label">Phone</label>
+          <div class="col-6">
+            <input class="form-control" type="text" id="phone" name = "phone" [(ngModel)]="newContact.phone">
+          </div>
+        </div>
+
+        <button class="btn btn-primary" (click) = "addContact(newContact)"> Add </button>
+
+      </form>
+    </div>
+  </div>
+<!--
+  <div>
+    <h3>Liste des contacts avec id pair</h3>
+    <ul>
+      <div *ngFor="let contact of contacts;">
+        <li *ngIf="contact.isEven()">{{contact.format()}}</li>
+      </div>
+    </ul>
+
+    <div>
+      <input type="text" [(ngModel)]="saisie" />
+    </div>
+    <div>
+      Saisie: <h2>{{saisie}}</h2>
+    </div>
+  </div>
+-->
+</div>

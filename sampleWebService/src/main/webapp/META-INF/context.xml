@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Context xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" >
+	<Resource
+		name="jdbc/test"
+		type="javax.sql.DataSource"
+		JtaManaged="false"
+
+		driverClassName="org.postgresql.Driver"
+		url="jdbc:postgresql://localhost:5433/postgres"
+		username="postgres"
+		password="admin"
+		/>
+</Context>

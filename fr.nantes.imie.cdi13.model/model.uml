@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="__IWl8NvwEeafCaCCXRR_YA" name="NewModel">
+  <packageImport xmi:id="_CIpT4NwBEeasR7QHXPdqZQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packageImport xmi:id="_PbcmsNwBEeasR7QHXPdqZQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_G6w0gNwAEeasR7QHXPdqZQ" name="Moyen d'écrire" isAbstract="true">
+    <ownedAttribute xmi:id="_1Afx4NwAEeasR7QHXPdqZQ" name="couleur" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1AgY8NwAEeasR7QHXPdqZQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1AhAANwAEeasR7QHXPdqZQ" value="1"/>
+      <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="__oRmcNyQEeaAnc_0Dhjl3A" name="ma contrainte">
+        <body>couleur != null</body>
+      </defaultValue>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_y-Aq0NwCEeasR7QHXPdqZQ" name="getCouleur"/>
+    <ownedOperation xmi:id="_1ueAQNwCEeasR7QHXPdqZQ" name="setCouleur">
+      <ownedParameter xmi:id="_35wMENwCEeasR7QHXPdqZQ" name="couleur">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_K3AnoNwAEeasR7QHXPdqZQ" name="Feutre">
+    <generalization xmi:id="_S0pMkNwAEeasR7QHXPdqZQ" general="_G6w0gNwAEeasR7QHXPdqZQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LLRncNwAEeasR7QHXPdqZQ" name="Stylo">
+    <generalization xmi:id="_SQCqsNwAEeasR7QHXPdqZQ" general="_G6w0gNwAEeasR7QHXPdqZQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_zLY08NwBEeasR7QHXPdqZQ" name="Personne" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_IHYtwNwCEeasR7QHXPdqZQ" name="Professeur">
+    <generalization xmi:id="_Y-vFYNwCEeasR7QHXPdqZQ" general="_zLY08NwBEeasR7QHXPdqZQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_KlThsNwCEeasR7QHXPdqZQ" name="Eleve">
+    <generalization xmi:id="_X5t-ENwCEeasR7QHXPdqZQ" general="_zLY08NwBEeasR7QHXPdqZQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Mdub4NwCEeasR7QHXPdqZQ" name="Dessinateur">
+    <generalization xmi:id="_YZlw8NwCEeasR7QHXPdqZQ" general="_zLY08NwBEeasR7QHXPdqZQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_hTLAwNwCEeasR7QHXPdqZQ" name="Utiliser" memberEnd="_hTLAwdwCEeasR7QHXPdqZQ _hTLAxNwCEeasR7QHXPdqZQ" navigableOwnedEnd="_hTLAwdwCEeasR7QHXPdqZQ _hTLAxNwCEeasR7QHXPdqZQ">
+    <ownedEnd xmi:id="_hTLAwdwCEeasR7QHXPdqZQ" name="personnes" type="_zLY08NwBEeasR7QHXPdqZQ" association="_hTLAwNwCEeasR7QHXPdqZQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hTLAwtwCEeasR7QHXPdqZQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hTLAw9wCEeasR7QHXPdqZQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_hTLAxNwCEeasR7QHXPdqZQ" name="moyen d'écrires" type="_G6w0gNwAEeasR7QHXPdqZQ" association="_hTLAwNwCEeasR7QHXPdqZQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_hTLAxdwCEeasR7QHXPdqZQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hTLAxtwCEeasR7QHXPdqZQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ACNEcNwEEeasR7QHXPdqZQ" name="Support d'écriture" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Cj-doNwEEeasR7QHXPdqZQ" name="Papier">
+    <generalization xmi:id="_FyoK8NwEEeasR7QHXPdqZQ" general="_ACNEcNwEEeasR7QHXPdqZQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_KQ4e8NwEEeasR7QHXPdqZQ" name="Effacable">
+    <ownedAttribute xmi:id="_U5s_4NyVEeaAnc_0Dhjl3A" name="property1" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U52w4NyVEeaAnc_0Dhjl3A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U52w4dyVEeaAnc_0Dhjl3A" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_LrjGINwEEeasR7QHXPdqZQ" name="Feutre effacable">
+    <generalization xmi:id="_PW8Z0NwEEeasR7QHXPdqZQ" general="_K3AnoNwAEeasR7QHXPdqZQ"/>
+    <interfaceRealization xmi:id="_Q32L4NwEEeasR7QHXPdqZQ" client="_LrjGINwEEeasR7QHXPdqZQ" supplier="_KQ4e8NwEEeasR7QHXPdqZQ" contract="_KQ4e8NwEEeasR7QHXPdqZQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_aAAqQNwEEeasR7QHXPdqZQ" name="Utiliser" memberEnd="_aAAqQdwEEeasR7QHXPdqZQ _aAAqRNwEEeasR7QHXPdqZQ" navigableOwnedEnd="_aAAqQdwEEeasR7QHXPdqZQ _aAAqRNwEEeasR7QHXPdqZQ">
+    <ownedEnd xmi:id="_aAAqQdwEEeasR7QHXPdqZQ" name="support d'écritures" type="_ACNEcNwEEeasR7QHXPdqZQ" association="_aAAqQNwEEeasR7QHXPdqZQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aAAqQtwEEeasR7QHXPdqZQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aAAqQ9wEEeasR7QHXPdqZQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_aAAqRNwEEeasR7QHXPdqZQ" name="personnes" type="_zLY08NwBEeasR7QHXPdqZQ" association="_aAAqQNwEEeasR7QHXPdqZQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aAAqRdwEEeasR7QHXPdqZQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aAAqRtwEEeasR7QHXPdqZQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_48J-oNyOEeaAnc_0Dhjl3A" name="Tableau blanc">
+    <generalization xmi:id="_7wypcNyOEeaAnc_0Dhjl3A" general="_ACNEcNwEEeasR7QHXPdqZQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_AXRFUNyPEeaAnc_0Dhjl3A" memberEnd="_AXRFUdyPEeaAnc_0Dhjl3A _AXRFVNyPEeaAnc_0Dhjl3A" navigableOwnedEnd="_AXRFUdyPEeaAnc_0Dhjl3A _AXRFVNyPEeaAnc_0Dhjl3A">
+    <ownedEnd xmi:id="_AXRFUdyPEeaAnc_0Dhjl3A" name="effacables" type="_KQ4e8NwEEeasR7QHXPdqZQ" association="_AXRFUNyPEeaAnc_0Dhjl3A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AXRFUtyPEeaAnc_0Dhjl3A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AXRFU9yPEeaAnc_0Dhjl3A" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_AXRFVNyPEeaAnc_0Dhjl3A" name="tableau blancs" type="_48J-oNyOEeaAnc_0Dhjl3A" association="_AXRFUNyPEeaAnc_0Dhjl3A">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_AXRFVdyPEeaAnc_0Dhjl3A"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_AXRFVtyPEeaAnc_0Dhjl3A" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>

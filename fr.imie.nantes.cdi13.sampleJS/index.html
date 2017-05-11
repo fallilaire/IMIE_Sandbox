@@ -1,0 +1,44 @@
+<html>
+<head>
+<style>
+#thing1 {
+	position : absolute;
+	top : 50px;
+	background : #FC0;
+	width : 50px;
+	height : 50px;
+	border-radius : 100%;
+}
+</style>
+</head>
+<body>
+<div id="thing1"></div>
+<button onmousedown="changeDir('right'); startAnimation()" onmouseup="stopAnimation()">Right</button>
+<button onmousedown="changeDir('left'); startAnimation()" onmouseup="stopAnimation()">Left</button>
+
+<script>
+var e1 = document.getElementById('thing1');
+var reqID;
+var dir;
+
+function changeDir(d) {
+	dir = d;
+}
+
+function startAnimation() {
+	if (dir == 'right') {
+		e1.style.left = (e1.offsetLeft += 1) + 'px';
+	}
+	else if (dir == 'left') {
+		e1.style.left = (e1.offsetLeft -= 1) + 'px';
+	}
+	reqID = window.requestAnimationFrame(startAnimation);
+}
+
+function stopAnimation() {
+	window.cancelAnimationFrame(reqID);
+}
+</script>
+
+</body>
+</html>

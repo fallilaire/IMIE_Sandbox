@@ -1,0 +1,125 @@
+/* line 4, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+.clear {
+  clear: both;
+}
+
+/* line 8, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+h1 {
+  color: #480505;
+}
+
+/* line 12, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+#paragraphes {
+  background-color: red;
+}
+
+/* line 14, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+#paragraphes p {
+  color: white;
+}
+
+/* line 19, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+#conteneur {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 24, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+section {
+  width: 100%;
+}
+
+/* line 28, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+header {
+  max-height: 300;
+  background-color: blue;
+}
+
+/* line 37, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* line 43, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+li {
+  font-style: italic;
+  width: 14.28571%;
+}
+
+/* line 48, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+article {
+  width: 300px;
+  min-width: 100px;
+  background-color: #457965;
+}
+
+/* line 54, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+aside {
+  width: 100px;
+}
+
+/* line 58, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+footer {
+  max-height: 200px;
+  background-color: grey;
+}
+
+/* line 63, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+.bloc_carree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #540065;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* line 68, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+.bloc_forme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #540065;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* line 20, C:/Users/Freddy/Desktop/web_sample/sass/scss/_mixins.scss */
+.bloc_forme p {
+  color: orange;
+}
+
+/* line 73, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+.bloc, .ronds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  float: left;
+}
+
+/* line 20, C:/Users/Freddy/Desktop/web_sample/sass/scss/_mixins.scss */
+.bloc p, .ronds p {
+  color: white;
+}
+
+@media (max-width: 600px), (max-device-width: 600px) {
+  /* line 73, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+  .bloc, .ronds {
+    float: right;
+  }
+}
+
+/* line 84, C:/Users/Freddy/Desktop/web_sample/sass/scss/style.scss */
+.ronds p {
+  color: blue;
+}
+
+/*# sourceMappingURL=../css/style.map */

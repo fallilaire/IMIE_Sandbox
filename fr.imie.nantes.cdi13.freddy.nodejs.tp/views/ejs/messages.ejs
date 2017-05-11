@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+	<title>Liste des messages</title>
+</head>
+<body>
+	<div>
+      <h1>Liste des messages <% if (data.auteur) { %> de <%= data.auteur %> |  <% } %></h1>
+	</div>
+	<div>
+		<ul>
+			<% for (var i=0; i < data.length; i++) { %> 
+			<li>
+				<%= data[i].auteur %> - <%= data[i].message %></a>
+			</li>
+			<% } %>
+		</ul>
+	</div>
+
+</body>
+</html>

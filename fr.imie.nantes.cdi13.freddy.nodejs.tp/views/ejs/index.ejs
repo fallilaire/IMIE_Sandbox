@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<title>Home Page</title>
+</head>
+<body>
+	<div>
+		<h1>Home Page TP</h1>
+	</div>
+	<div>
+		<h2><a href="/hello-world">Hello World</a></h2>
+	</div>
+	<div>
+		<h2><a href="/coucou/Babar">Test de coucou</a></h2>
+	</div>
+	<div>
+		<div>
+			<h2>Formulaire pour le GET PING</h2>
+			<form method="GET" action="/ping">
+				<div>Message : <input name="message" type=text /></div>
+				<div><input type="submit" /></div>
+			</form>
+		</div>
+	</div>
+	<div>
+		<div>
+			<h2>Formulaire pour le POST MESSAGE</h2>
+			<form method="POST" action="/message">
+				<div>Auteur : <input name="auteur" type=text /></div>
+				<div>Contenu : <input name="message" type=text /></div>
+				<div><input type="submit" /></div>
+			</form>
+		</div>
+	</div>
+	<div>
+		<h2><a href="/messages">Liste des messages</a></h2>
+	</div>
+	<div>
+		<h2><a href="/messages/Bob">Liste des messages de Bob</a></h2>
+	</div>
+</body>
+</html>

@@ -1,0 +1,2 @@
+function Mole(htmlElement, game){
+}
